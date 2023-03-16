@@ -16,7 +16,7 @@
 <body>
 <div class="container">
     <div class="col-6 offset-3">
-        <form action="" method="post">
+        <form action="/SOF3011_IT17311_thanhldph22749_war_exploded/dongsp/store" method="post">
             <h3 class="text-center my-4 text-danger">Quản lý dòng sản phẩm</h3>
             <div class="col-md-12 ">
                 <label class="form-label">Mã</label>
@@ -25,6 +25,12 @@
             <div class="col-md-12 mt-3">
                 <label class="form-label">Tên</label>
                 <input type="text" name="ten" class="form-control" placeholder="Nhập tên...">
+            </div>
+            <div class="row mt-3">
+                <div class="col-6">
+                    <button class="btn btn-primary">Thêm mới</button>
+                </div>
+                <div class="col-6"></div>
             </div>
         </form>
     </div>

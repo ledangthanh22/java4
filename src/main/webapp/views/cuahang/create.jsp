@@ -15,7 +15,7 @@
 <body>
 <div class="container">
     <div class="col-8 offset-2">
-        <form action="" method="post" action="/SOF3011_IT17311_thanhldph22749_war_exploded/cuahang/store">
+        <form action="/SOF3011_IT17311_thanhldph22749_war_exploded/cuahang/store" method="post" >
             <h3 class="text-center my-4 text-danger">Quản lý cửa hàng</h3>
             <div class="col-md-12 ">
                 <label class="form-label">Mã</label>

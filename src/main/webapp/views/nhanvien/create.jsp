@@ -15,7 +15,7 @@
 <body>
 <div class="container">
     <div class="col-10 offset-1">
-        <form action="" method="post">
+        <form action="/SOF3011_IT17311_thanhldph22749_war_exploded/nhanvien/store" method="post">
             <h3 class="my-3 text-danger text-center">Quản lý nhân viên</h3>
             <div class="row">
                 <div class="col-md-4">
@@ -45,7 +45,10 @@
                 </div>
                 <div class="col-md-4">
                     <label class="form-label">Giới tính</label>
-                    <input type="text" class="form-control" name="gioiTinh" placeholder="Nhập giới tính...">
+                    <select name="gioiTinh" class="form-select">
+                        <option value="nv">Nam</option>
+                        <option value="ql">Nữ</option>
+                    </select>
                 </div>
             </div>
 
@@ -82,23 +85,33 @@
                 </div>
                 <div class="col-md-6">
                     <label class="form-label">Trạng thái</label>
-                    <div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="gender" ng-model="inputValue.gender"
-                                   value="Nam">
-                            <label class="form-check-label">
-                                Đang làm
-                            </label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="gender" ng-model="inputValue.gender"
-                                   value="Nữ">
-                            <label class="form-check-label">
-                                Đã nghỉ
-                            </label>
-                        </div>
-                    </div>
+                    <select name="trangThai" class="form-select">
+                        <option >0</option>
+                        <option >1</option>
+                    </select>
+<%--                    <div>--%>
+<%--                        <div class="form-check form-check-inline">--%>
+<%--                            <input class="form-check-input" type="radio" name="trangThai"--%>
+<%--                                   value="tr">--%>
+<%--                            <label class="form-check-label">--%>
+<%--                                0--%>
+<%--                            </label>--%>
+<%--                        </div>--%>
+<%--                        <div class="form-check form-check-inline">--%>
+<%--                            <input class="form-check-input" type="radio" name="trangThai"--%>
+<%--                                   value="false">--%>
+<%--                            <label class="form-check-label">--%>
+<%--                                1--%>
+<%--                            </label>--%>
+<%--                        </div>--%>
+<%--                    </div>--%>
                 </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-6">
+                    <button class="btn btn-primary">Thêm mới</button>
+                </div>
+                <div class="col-6"></div>
             </div>
         </form>
     </div>

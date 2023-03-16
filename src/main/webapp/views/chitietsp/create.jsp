@@ -16,7 +16,7 @@
 <body>
 <div class="container">
     <div class="col-10 offset-1">
-        <form action="" method="post">
+        <form action="/SOF3011_IT17311_thanhldph22749_war_exploded/chitietsp/store" method="post">
             <h3 class="text-center my-4 text-danger">Quản lý chi tiết sản phẩm</h3>
             <div class="row mt-3">
                 <div class="col-md-6">
@@ -75,7 +75,12 @@
                 <label class="form-label" >Mô tả</label>
                 <textarea name="moTa" class="form-control" placeholder="Nhập mô tả..."></textarea>
             </div>
-
+            <div class="row mt-3">
+                <div class="col-6">
+                    <button class="btn btn-primary">Thêm mới</button>
+                </div>
+                <div class="col-6"></div>
+            </div>
         </form>
     </div>
 </div>

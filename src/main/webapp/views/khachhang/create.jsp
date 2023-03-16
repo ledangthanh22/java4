@@ -74,7 +74,7 @@
                     </select>
                 </div>
             </div>
-            <div class="row ">
+            <div class="row mt-3">
                 <div class="col-6">
                     <button class="btn btn-primary">Thêm mới</button>
                 </div>

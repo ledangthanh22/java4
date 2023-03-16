@@ -29,11 +29,10 @@ public class KhachHangServlet extends HttpServlet {
         if (uri.contains("create")) {
             this.create(req, resp);
 //        } else if (uri.contains("edit")) {
-////            this.edit(req,resp);
+//            this.edit(req,resp);
 //        } else if (uri.contains("delete")) {
-////            this.delete(req,resp);
-        }
-        else {
+//            this.delete(req,resp);
+        } else {
             this.index(req, resp);
         }
     }
@@ -49,8 +48,8 @@ public class KhachHangServlet extends HttpServlet {
 
     protected void index(HttpServletRequest request,
                          HttpServletResponse response) throws ServletException, IOException {
-        this.listKH.add(new KhachHangViewModel("Ph32","Le","Dang","Thanh","22/06/2002","0369958572","Thai Nguyen","dusacb","VN","HN"));
-        request.setAttribute("danhSachKH",this.listKH);
+        this.listKH.add(new KhachHangViewModel("Ph32", "Le", "Dang", "Thanh", "22/06/2002", "0369958572", "Thai Nguyen", "dusacb", "VN", "HN"));
+        request.setAttribute("danhSachKH", this.listKH);
         request.getRequestDispatcher("/views/khachhang/index.jsp")
                 .forward(request, response);
     }
@@ -77,7 +76,6 @@ public class KhachHangServlet extends HttpServlet {
         String diaChi = request.getParameter("diaChi");
         String quocGia = request.getParameter("quocGia");
         String thanhPho = request.getParameter("thanhPho");
-
 
         KhachHangViewModel khvm = new KhachHangViewModel(ma, ho, tenDem, ten, ngaySinh, soDienThoai, diaChi, matKhau, quocGia, thanhPho);
         listKH.add(khvm);

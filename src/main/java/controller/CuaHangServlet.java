@@ -23,10 +23,26 @@ public class CuaHangServlet extends HttpServlet {
     ArrayList<CuaHangViewModel> listCH = new ArrayList<>();
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        this.create(req, resp);
+        String uri = req.getRequestURI();
+        if (uri.contains("create")){
+            this.create(req,resp);
+//        }else if(uri.contains("edit")){
+//            this.edit(req,resp);
+//        }else if(uri.contains("delete")){
+//            this.delete(req,resp);
+        }
+        else{
+            this.index(req,resp);
+        }
     }
     protected  void create(HttpServletRequest request, HttpServletResponse response) throws ServletException,IOException{
         request.getRequestDispatcher("/views/cuahang/create.jsp").forward(request,response);
+    }
+    protected  void index(HttpServletRequest request, HttpServletResponse response) throws  ServletException, IOException{
+        this.listCH.add(new CuaHangViewModel("CH1","No name", "Dai Tu- Thai Nguyen", "Thai Nguyen", "Viet Nam"));
+        request.setAttribute("danhSachCH",this.listCH);
+        request.getRequestDispatcher("/views/cuahang/index.jsp").forward(request,response);
+
     }
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

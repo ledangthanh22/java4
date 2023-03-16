@@ -24,13 +24,27 @@ public class DongSPServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        this.create(req, resp);
+        String uri = req.getRequestURI();
+        if (uri.contains("create")){
+            this.create(req,resp);
+//        }else if(uri.contains("edit")){
+//            this.edit(req,resp);
+//        }else if (uri.contains("delete")){
+//            this.delete(req,resp)
+        }
+        else {
+            this.index(req,resp);
+        }
     }
 
     protected void create(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.getRequestDispatcher("/views/dongsp/create.jsp").forward(request, response);
     }
-
+    protected void index(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        this.listDSP.add(new DongSPViewModel("dsp1","Ao"));
+        request.setAttribute("danhSachDSP",this.listDSP);
+        request.getRequestDispatcher("/views/dongsp/index.jsp").forward(request, response);
+    }
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         this.store(req, resp);
