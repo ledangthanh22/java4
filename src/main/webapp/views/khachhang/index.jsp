@@ -8,20 +8,23 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <%@ taglib prefix="f" uri="jakarta.tags.functions" %>
-<html>
-<head>
-    <title>Khach Hang</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-</head>
-<body>
+
 <div class="container">
-    <h3 class="text-center my-3 text-danger">Thông tin khách hàng</h3>
+    <div class="row  mt-4 ">
+        <div class="col-2">
+            <a class="btn btn-primary mb-2" style="background-color: #6610f2" href="/SOF3011_IT17311_thanhldph22749_war_exploded/khachhang/create" role="button"> Thêm mới</a>
+        </div>
+        <div class="col-9">
+            <h4 style="margin-left: 170px; color: red" class="  mb-3" >Thông tin khách hàng</h4>
+        </div>
+
+    </div>
+
     <c:if test="${ f:length(danhSachKH) == 0 }">
         <h3 class="alert alert-warning">Không có dữ liệu</h3>
     </c:if>
     <c:if test="${ f:length(danhSachKH) != 0 }">
-        <table class="table table-hover" style="font-size: 13px">
+        <table class="table table-hover table-light" style="font-size: 13px;">
             <thead>
             <tr>
                 <th scope="col">Mã</th>
@@ -34,26 +37,27 @@
                 <th scope="col">Mật khẩu</th>
                 <th scope="col">Quốc gia</th>
                 <th scope="col">Thành phố</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
 
 
             </tr>
             </thead>
             <tbody>
             <c:forEach items="${ danhSachKH }" var="kh">
-            <tr>
-                <th>${kh.ma}</th>
-                <th>${kh.ho}</th>
-                <th>${kh.tenDem}</th>
-                <th>${kh.ten}</th>
-                <th>${kh.ngaySinh}</th>
-                <th>${kh.soDienThoai}</th>
-                <th>${kh.diaChi}</th>
-                <th>${kh.matKhau}</th>
-                <th>${kh.quocGia}</th>
-                <th>${kh.thanhPho}</th>
-
-
-
+            <tr >
+                <td>${kh.ma}</td>
+                <td>${kh.ho}</td>
+                <td>${kh.tenDem}</td>
+                <td>${kh.ten}</td>
+                <td>${kh.ngaySinh}</td>
+                <td>${kh.soDienThoai}</td>
+                <td>${kh.diaChi}</td>
+                <td>${kh.matKhau}</td>
+                <td>${kh.quocGia}</td>
+                <td>${kh.thanhPho}</td>
+                <td ><a href="/SOF3011_IT17311_thanhldph22749_war_exploded/khachhang/edit?ma=${kh.ma}"><i style="color: #0b5ed7;" class="far fa-edit"></i></a></td>
+                <td ><a href="/SOF3011_IT17311_thanhldph22749_war_exploded/khachhang/delete?ma=${kh.ma}"><i style="color: red;" class="fas fa-trash-alt"></i></a></td>
             </tr>
             </c:forEach>
             </tbody>
@@ -61,11 +65,4 @@
 
     </c:if>
 </div>
-<style>
 
-</style>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-        crossorigin="anonymous"></script>
-</body>
-</html>

@@ -8,15 +8,16 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <%@ taglib prefix="f" uri="jakarta.tags.functions" %>
-<html>
-<head>
-    <title>Khach Hang</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-</head>
-<body>
 <div class="container">
-    <h3 class="text-center my-3 text-danger">Thông tin nhân viên</h3>
+<div class="row  mt-4 ">
+    <div class="col-2">
+        <a class="btn btn-primary mb-2" style="background-color: #6610f2" href="/SOF3011_IT17311_thanhldph22749_war_exploded/nhanvien/create" role="button"> Thêm mới</a>
+    </div>
+    <div class="col-9">
+        <h4 style="margin-left: 170px; color: red" class="  mb-3" >Thông tin nhân viên</h4>
+    </div>
+
+</div>
     <c:if test="${ f:length(danhSachNV) == 0 }">
         <h3 class="alert alert-warning">Không có dữ liệu</h3>
     </c:if>
@@ -32,28 +33,32 @@
                 <th scope="col">Ngày sinh</th>
                 <th scope="col">Địa chỉ</th>
                 <th scope="col">Số điện thoại</th>
-                <th scope="col">Mật khẩu</th>
                 <th scope="col">Cửa hàng</th>
                 <th scope="col">Chức vụ</th>
+                <th scope="col">Mật khẩu</th>
                 <th scope="col">Trạng thái</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
 
             </tr>
             </thead>
             <tbody>
             <c:forEach items="${ danhSachNV }" var="nv">
                 <tr>
-                    <th>${nv.ma}</th>
-                    <th>${nv.ho}</th>
-                    <th>${nv.tenDem}</th>
-                    <th>${nv.ten}</th>
-                    <th>${nv.gioiTinh}</th>
-                    <th>${nv.ngaySinh}</th>
-                    <th>${nv.diaChi}</th>
-                    <th>${nv.soDienThoai}</th>
-                    <th>${nv.matKhau}</th>
-                    <th>${nv.cuaHang}</th>
-                    <th>${nv.chucVu}</th>
-                    <th>${nv.trangThai}</th>
+                    <td>${nv.ma}</td>
+                    <td>${nv.ho}</td>
+                    <td>${nv.tenDem}</td>
+                    <td>${nv.ten}</td>
+                    <td>${nv.gioiTinh == true ?"Nam":"Nữ"}</td>
+                    <td>${nv.ngaySinh}</td>
+                    <td>${nv.diaChi}</td>
+                    <td>${nv.soDienThoai}</td>
+                    <td>${nv.cuaHang.ten}</td>
+                    <td>${nv.chucVu.ten}</td>
+                    <td>${nv.matKhau}</td>
+                    <td>${nv.trangThai == 0? "Đã nghỉ":"Đang làm"}</td>
+                    <td ><a href="/SOF3011_IT17311_thanhldph22749_war_exploded/nhanvien/edit?ma=${nv.ma}" ><i style="color: red;" class="far fa-edit"></i></a></td>
+                    <td ><a href="/SOF3011_IT17311_thanhldph22749_war_exploded/nhanvien/delete?ma=${nv.ma}" ><i style="color: red;" class="fas fa-trash-alt"></i></a></td>
                 </tr>
             </c:forEach>
             </tbody>
@@ -61,11 +66,6 @@
 
     </c:if>
 </div>
-<style>
 
-</style>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-        crossorigin="anonymous"></script>
-</body>
-</html>
+
+

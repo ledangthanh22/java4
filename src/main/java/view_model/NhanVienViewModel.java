@@ -10,14 +10,14 @@ public class NhanVienViewModel {
     private String diaChi;
     private String soDienThoai;
     private String matKhau;
-    private String chucVu;
-    private String cuaHang;
+    private int chucVu;
+    private int cuaHang;
     private int trangThai;
 
     public NhanVienViewModel() {
     }
 
-    public NhanVienViewModel(String ma, String ho, String tenDem, String ten, String gioiTinh, String ngaySinh, String diaChi, String soDienThoai, String matKhau, String chucVu, String cuaHang, int trangThai) {
+    public NhanVienViewModel(String ma, String ho, String tenDem, String ten, String gioiTinh, String ngaySinh, String diaChi, String soDienThoai, String matKhau, int chucVu, int cuaHang, int trangThai) {
         this.ma = ma;
         this.ho = ho;
         this.tenDem = tenDem;
@@ -104,19 +104,19 @@ public class NhanVienViewModel {
         this.matKhau = matKhau;
     }
 
-    public String getChucVu() {
+    public int getChucVu() {
         return chucVu;
     }
 
-    public void setChucVu(String chucVu) {
+    public void setChucVu(int chucVu) {
         this.chucVu = chucVu;
     }
 
-    public String getCuaHang() {
+    public int getCuaHang() {
         return cuaHang;
     }
 
-    public void setCuaHang(String cuaHang) {
+    public void setCuaHang(int cuaHang) {
         this.cuaHang = cuaHang;
     }
 
