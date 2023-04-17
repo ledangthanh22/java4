@@ -37,7 +37,7 @@ public class SanPhamCT {
     private String namBH;
 
     @Column(name = "SoLuongTon")
-    private int soLuongTon;
+    private String soLuongTon;
 
     @Column(name = "GiaNhap")
     private String giaNhap;
@@ -58,7 +58,7 @@ public class SanPhamCT {
     public SanPhamCT() {
     }
 
-    public SanPhamCT(String id, SanPham sanPham, NSX nSX, MauSac mauSac, DongSP dongSP, String namBH, int soLuongTon, String giaNhap, String giaBan, String moTa, String anh) {
+    public SanPhamCT(String id, SanPham sanPham, NSX nSX, MauSac mauSac, DongSP dongSP, String namBH, String soLuongTon, String giaNhap, String giaBan, String moTa, String anh) {
         this.id = id;
         this.sanPham = sanPham;
         this.nSX = nSX;
@@ -120,11 +120,11 @@ public class SanPhamCT {
         this.namBH = namBH;
     }
 
-    public int getSoLuongTon() {
+    public String getSoLuongTon() {
         return soLuongTon;
     }
 
-    public void setSoLuongTon(int soLuongTon) {
+    public void setSoLuongTon(String soLuongTon) {
         this.soLuongTon = soLuongTon;
     }
 

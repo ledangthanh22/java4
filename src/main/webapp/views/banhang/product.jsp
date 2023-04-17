@@ -17,10 +17,10 @@
                      alt="Card image cap">
                 <div class="card-body">
                     <h6 class="card-title">${sp.sanPham.ten}</h6>
-                    <p class="price">${sp.giaBan  }đ</p>
+                    <p class="price">${sp.giaBan  }đ</p>index
 <%--                    <h6 class="category">Category: <%=p.getCategory() %></h6>--%>
                     <div class="mt-3 d-flex justify-content-between">
-                        <a class="btn btn-dark" href="/SOF3011_IT17311_thanhldph22749_war_exploded/giohangchitiet/index">Add to Cart</a> <a
+                        <a class="btn btn-dark" href="/SOF3011_IT17311_thanhldph22749_war_exploded/giohangchitiet/">Add to Cart</a> <a
                             class="btn btn-primary" href="">Buy Now</a>
                     </div>
                 </div>

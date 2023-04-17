@@ -175,9 +175,9 @@ public class SanPhamCTServlet extends HttpServlet {
         spct.setDongSP(dsp);
         errorNamBH = Validate.checkValues(spct.getNamBH(),"Năm bảo hành");
         errorMoTa = Validate.checkValues(spct.getMoTa(),"Mô tả");
-        errorSoLuongTon = Validate.checkValues(spct.getMoTa(),"Số lượng tồn");
-        errorGiaNhap = Validate.checkValues(spct.getMoTa(),"Giá nhập");
-        errorGiaBan = Validate.checkValues(spct.getMoTa(),"Giá bán");
+        errorSoLuongTon = Validate.checkValues(spct.getSoLuongTon(),"Số lượng tồn");
+        errorGiaNhap = Validate.checkValues(spct.getGiaNhap(),"Giá nhập");
+        errorGiaBan = Validate.checkValues(spct.getGiaBan(),"Giá bán");
         errorAnh = Validate.checkValues(spct.getAnh(),"Img");
 
 
